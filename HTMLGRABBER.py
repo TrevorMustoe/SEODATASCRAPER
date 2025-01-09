@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.raygunprinting.com/"
+url = "https://www.devonbristolshaw.com/"
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
 
 response = requests.get(url, headers=headers)
@@ -70,6 +70,19 @@ else:
     for paragraph in paragraphs:
         print(paragraph.text)
     print(" ")
+    
+    
+links = soup.find_all("a")
+
+# Extract the href attribute from each anchor tag
+print("---------------")
+print("<p> tags found:")
+print("---------------")
+for link in links:
+    href = link.get("href")
+    if href:
+        print(href)
+
 
 h1_words = set()
 for h1 in h1_tags:
