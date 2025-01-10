@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-# add in the url that you woudl like to scrape to the url below
+# add in the url that you would like to scrape to the url below
 url = ""
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
 
@@ -15,6 +15,7 @@ else:
     exit()
 
 soup = BeautifulSoup(html_content, 'html.parser')
+
                                                       
 h1_tags = soup.find_all('h1')
 if not h1_tags:
