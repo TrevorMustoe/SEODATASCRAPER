@@ -16,6 +16,7 @@ else:
 
 soup = BeautifulSoup(html_content, 'html.parser')
 
+#need to add in a check to get rid of all trash seo words like the and to
                                                       
 h1_tags = soup.find_all('h1')
 if not h1_tags:
