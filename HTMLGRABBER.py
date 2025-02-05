@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # add in the url that you would like to scrape to the url below
-url = ""
+url = "ADD IN URL HERE"
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
 
 response = requests.get(url, headers=headers)
@@ -78,7 +78,7 @@ links = soup.find_all("a")
 
 # Extract the href attribute from each anchor tag
 print("---------------")
-print("<p> tags found:")
+print("All links found:")
 print("---------------")
 for link in links:
     href = link.get("href")
